@@ -13,21 +13,21 @@ Develop a basic version of a customer support ticket system that allows users to
 
 ## Laravel Project Setup:
 
-    First of all, we need to get a fresh Laravel 11 version application using below command, So open your terminal OR command prompt and run below command:
+First of all, we need to get a fresh Laravel 11 version application using below command, So open your terminal OR command prompt and run below command:
 
-    composer create-project laravel/laravel ticket-support-system
+composer create-project laravel/laravel ticket-support-system
 
 ## Run below command to install laravel ui package by below command:
  
- composer require laravel/ui
+    composer require laravel/ui
 
 ## Next, you have to install the laravel UI package command for creating auth scaffolding using bootstrap 5. so let's run the below command:
 
-php artisan ui bootstrap --auth
+    php artisan ui bootstrap --auth
 
 ## Now let's run below command for install npm:
 
-npm install && npm run dev
+    npm install && npm run dev
 It will generate CSS and js min files.
 
 ## Design the database with tables for users and tickets
@@ -35,9 +35,9 @@ The tickets table should include fields for a title, description, user_id, statu
 
 ## Next run migration command:
 
-php artisan migrate
+    php artisan migrate
 
-## Create ticket form, ticket list page, Remarks form
+## Create routes and forms for create ticket, ticket list page, Remarks form
 
 Authenticated users should be able to submit new tickets and view a list of their submitted tickets.
 
@@ -45,7 +45,7 @@ Authenticated users should be able to submit new tickets and view a list of thei
 
 Jquery form validation for frontend validation
 
-Create request class for backend validation
+Create custom request class for backend validation
 
 ## Role based access control
 
@@ -66,7 +66,10 @@ MAIL_FROM_ADDRESS=youmailname@gmail.com
 MAIL_FROM_NAME="${APP_NAME}"
 
 ## run below command
-php artisan optimize
+    php artisan optimize
+
+## Making Laravel Email Notification
+    php artisan make:notification TicketStatus
 
 ## Sending notification to mail
 
