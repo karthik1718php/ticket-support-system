@@ -15,7 +15,7 @@ Develop a basic version of a customer support ticket system that allows users to
 
 First of all, we need to get a fresh Laravel 11 version application using below command, So open your terminal OR command prompt and run below command:
 
-composer create-project laravel/laravel ticket-support-system
+    composer create-project laravel/laravel ticket-support-system
 
 ## Run below command to install laravel ui package by below command:
  
