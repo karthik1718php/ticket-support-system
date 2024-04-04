@@ -58,14 +58,21 @@ Based on role, we are displaying the list of tickets.
 ## Configure .env file
 Here, we need to set up a configuration to be used for sending emails
 
-MAIL_MAILER=smtp
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USERNAME=*******@gmail.com
-MAIL_PASSWORD=**********
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=youmailname@gmail.com
-MAIL_FROM_NAME="${APP_NAME}"
+    MAIL_MAILER=smtp
+
+    MAIL_HOST=smtp.gmail.com
+
+    MAIL_PORT=587
+
+    MAIL_USERNAME=xxx@gmail.com
+
+    MAIL_PASSWORD=123456
+
+    MAIL_ENCRYPTION=tls
+
+    MAIL_FROM_ADDRESS=youmailname@gmail.com
+
+    MAIL_FROM_NAME="${APP_NAME}"
 
 ## run below command
     php artisan optimize
