@@ -68,4 +68,4 @@ MAIL_FROM_NAME="${APP_NAME}"
 
 Implement Laravel’s notification mail to alert users when there’s an update on their tickets.
 
-After send noptifica
+After sending notification, need to change ticket status as closed
