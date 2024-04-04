@@ -9,14 +9,14 @@
 
 ## Objective
 
-Develop a basic version of a customer support ticket system that allows users to submit support requests. The primary focus is on user registration, ticket submission, and viewing submitted tickets.
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Develop a basic version of a customer support ticket system that allows users to submit support requests.
 
 ## Core Requirements:
 
  Laravel Project Setup:
     First of all, we need to get a fresh Laravel 11 version application using below command, So open your terminal OR command prompt and run below command:
+
+    composer create-project laravel/laravel ticket-support-system
 
 ## Run below command to install laravel ui package by below command:
  
@@ -55,17 +55,11 @@ Based on role, we are displaying the list of tickets.
 ## Configure .env file
 Here, we need to set up a configuration to be used for sending emails
 
-MAIL_MAILER=smtp
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USERNAME=*********@gmail.com
-MAIL_PASSWORD=************
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=youmailname@gmail.com
-MAIL_FROM_NAME="${APP_NAME}"
+run below command
+    php artisan optimize
 
 ## Sending notification to mail
 
 Implement Laravel’s notification mail to alert users when there’s an update on their tickets.
 
-After sending notification, need to change ticket status as closed
+After sending notification, ticket status has been changed from open to closed
