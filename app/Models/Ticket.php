@@ -12,7 +12,7 @@ class Ticket extends Model
 
     protected $table = 'tickets';
 
-    protected $fillable = ['title', 'description', 'user_id'];
+    protected $fillable = ['title', 'description', 'user_id', 'remarks'];
 
     public function user(): BelongsTo
     {

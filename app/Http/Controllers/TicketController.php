@@ -60,14 +60,14 @@ class TicketController extends Controller
 
     public function sendResponse(Request $request) : RedirectResponse 
     {
-        $this->ticket::where('id',$request->ticketId)->update(['status' => 'closed']);
+        $this->ticket::where('id',$request->ticketId)->update(['remarks' => $request->remarks,'status' => 'closed']);
 
         $userId = $this->ticket::find($request->ticketId)->value('user_id');
 
         $user = User::find($userId);
   
         $messages["name"] = "Hi, ".ucfirst($user->name);
-        $messages["remarks"] = "This ticket ".$request->ticketId." has been closed, kindly check it ".$request->remarks;
+        $messages["remarks"] = "Ticket ID ".$request->ticketId." has been closed, kindly check it ".$request->remarks;
           
         $user->notify(new TicketStatus($messages));
 
