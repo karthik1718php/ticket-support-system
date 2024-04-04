@@ -17,7 +17,7 @@ First of all, we need to get a fresh Laravel 11 version application using below 
 
     composer create-project laravel/laravel ticket-support-system
 
-## Run below command to install laravel ui package by below command:
+## To install laravel ui package by below command:
  
     composer require laravel/ui
 

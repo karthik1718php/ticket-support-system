@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 class TicketController extends Controller
 {
     protected $ticket;
+
+    const USER = 'user';
+
+    const STAFF = 'staff';
+
     public function __construct(Ticket $ticket){
 
         $this->ticket = $ticket;
@@ -20,7 +25,7 @@ class TicketController extends Controller
     }
     public function ticketList(){
 
-        if(auth()->user()->role == 'user'){
+        if(auth()->user()->role == self::USER){
 
             $tickets = $this->ticket::where([['user_id', Auth::id()],['status','open']])->get();
         }

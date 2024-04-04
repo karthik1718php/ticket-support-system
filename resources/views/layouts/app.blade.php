@@ -43,9 +43,10 @@
                     <li class="nav-item">
 
                         <a class="nav-link" href="{{ route('tickets') }}">
+    
 
                             <!-- Currently we have two roles only -->
-                            @if(auth()->user()->role == 'user' )
+                            @if(auth()->user()->role == config('constants.user_role') )
 
                             {{ __('My Tickets') }}
 

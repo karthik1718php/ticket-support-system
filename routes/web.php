@@ -24,11 +24,13 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->group(function () {
 
+    // tickets
     Route::get('/tickets', [TicketController::class, 'ticketList'])->name('tickets');
     Route::get('create-ticket', [TicketController::class, 'createTicket'])->name('create-ticket');
     Route::post('store-ticket', [TicketController::class, 'storeTicket'])->name('store-ticket');
     Route::get('/ticket-view/{id}', [TicketController::class, 'ticketView'])->name('ticket.view');
 
+    // sending notification to email
     Route::post('send-response', [TicketController::class, 'sendResponse'])->name('send-response');
 
 });
