@@ -11,9 +11,8 @@
 
 Develop a basic version of a customer support ticket system that allows users to submit support requests.
 
-## Core Requirements:
+## Laravel Project Setup:
 
- Laravel Project Setup:
     First of all, we need to get a fresh Laravel 11 version application using below command, So open your terminal OR command prompt and run below command:
 
     composer create-project laravel/laravel ticket-support-system
@@ -40,11 +39,13 @@ php artisan migrate
 
 ## Create ticket form, ticket list page, Remarks form
 
-Ticket Submission: Authenticated users should be able to submit new tickets and view a list of their submitted tickets.
+Authenticated users should be able to submit new tickets and view a list of their submitted tickets.
 
 ## Implement Frontend/backend Validation for ticket submission form.
 
-Jquery validation
+Jquery form validation for frontend validation
+
+Create request class for backend validation
 
 ## Role based access control
 
@@ -55,8 +56,17 @@ Based on role, we are displaying the list of tickets.
 ## Configure .env file
 Here, we need to set up a configuration to be used for sending emails
 
-run below command
-    php artisan optimize
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=*******@gmail.com
+MAIL_PASSWORD=**********
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=youmailname@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"
+
+## run below command
+php artisan optimize
 
 ## Sending notification to mail
 
