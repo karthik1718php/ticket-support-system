@@ -11,14 +11,6 @@
 
 Develop a basic version of a customer support ticket system that allows users to submit support requests. The primary focus is on user registration, ticket submission, and viewing submitted tickets.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## Core Requirements:
@@ -26,29 +18,43 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
  Laravel Project Setup:
     First of all, we need to get a fresh Laravel 11 version application using below command, So open your terminal OR command prompt and run below command:
 
-Let's run bellow command to install laravel ui package by bellow command:
+## Run below command to install laravel ui package by below command:
  
- ## composer require laravel/ui
+ composer require laravel/ui
 
-Next, you have to install the laravel UI package command for creating auth scaffolding using bootstrap 5. so let's run the bellow command:
+## Next, you have to install the laravel UI package command for creating auth scaffolding using bootstrap 5. so let's run the below command:
 
-## php artisan ui bootstrap --auth
+php artisan ui bootstrap --auth
 
-Now let's run bellow command for install npm:
+## Now let's run below command for install npm:
 
-## npm install && npm run dev
-
+npm install && npm run dev
 It will generate CSS and js min files.
 
-Database Design:
-Design the database with tables for users and tickets
+## Design the database with tables for users and tickets
 The tickets table should include fields for a title, description, user_id, status (e.g., open, closed)
 
-Next run migration command:
+## Next run migration command:
 
-## php artisan migrate
+php artisan migrate
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Create and view ticket form
+
+Ticket Submission: Authenticated users should be able to submit new tickets and view a list of their submitted tickets.
+
+## Implement Frontend/backend Validation for ticket submission form.
+
+Jquery validation
+
+## Role based access control
+
+Added role in existing users table
+
+Based on role, we are displaying the list of tickets.
+
+## Send notification to mail
+
+Implement Laravel’s notification mail to alert users when there’s an update on their tickets.
 
 ## Laravel Sponsors
 
