@@ -46,6 +46,7 @@ Authenticated users should be able to submit new tickets and view a list of thei
 Jquery form validation for frontend validation
 
 Create custom request class for backend validation
+        php artisan make:Request StoreTicketRequest
 
 ## Role based access control
 
