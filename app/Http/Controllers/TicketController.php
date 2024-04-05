@@ -76,7 +76,7 @@ class TicketController extends Controller
           
         $user->notify(new TicketStatus($messages));
 
-        return redirect()->route('tickets')->withSuccess('Notification Sent successfully.');;
+        return redirect()->route('tickets')->withSuccess('Notification Sent successfully.');
 
     }
     
