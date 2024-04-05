@@ -22,10 +22,10 @@
                 <table class="table table-striped table-bordered">
                     <thead>
                       <tr>
-                        <th scope="col">S.No</th>
-                        <th scope="col">title</th>
-                        <th scope="col">description</th>
-                        <th scope="col">status</th>
+                        <th scope="col">Ticket ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Status</th>
                         @if(auth()->user()->role == config('constants.staff_role'))
                         <th scope="col">Created By</th>
                         <th scope="col">View</th>
@@ -36,7 +36,7 @@
                     <tbody>
                         @forelse ($tickets as $ticket)
                         <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
+                            <th scope="row">{{ $ticket->id }}</th>
                             <td>{{ $ticket->title }}</td>
                             <td>{{ $ticket->description }}</td>
                             <td>{{ $ticket->status }}</td>
