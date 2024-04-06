@@ -15,7 +15,6 @@ class TicketController extends Controller
     protected $ticket;
 
     const USER = 'user';
-
     const STAFF = 'staff';
 
     public function __construct(Ticket $ticket){

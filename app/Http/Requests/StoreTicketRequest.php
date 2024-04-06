@@ -22,7 +22,7 @@ class StoreTicketRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|string|max:60',
+            'title' => 'required|string|max:40',
         ];
     }
 

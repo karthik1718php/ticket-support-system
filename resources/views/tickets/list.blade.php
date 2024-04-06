@@ -42,7 +42,7 @@
                             <td>{{ $ticket->status }}</td>
                             @if(auth()->user()->role == config('constants.staff_role'))
                             <td>{{ $ticket->user->name }}</td>
-                            <td> <a href="{{ route('ticket.view', $ticket->id) }}" class="btn btn-primary btn-sm <?php if ($ticket->status == 'closed'){ ?> disabled <?php }?>"><i class="bi bi-pencil-square"></i> Response</a> </td>  
+                            <td> <a href="{{ route('ticket-view', $ticket->id) }}" class="btn btn-primary btn-sm <?php if ($ticket->status == 'closed'){ ?> disabled <?php }?>"><i class="bi bi-pencil-square"></i> Response</a> </td>  
                             @endif
                         </tr>
                         
