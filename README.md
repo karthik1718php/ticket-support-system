@@ -13,9 +13,11 @@ Develop a basic version of a customer support ticket system that allows users to
 
 ## Laravel Project Setup:
 
-First of all, we need to get a fresh Laravel 11 version application using below command, So open your terminal OR command prompt and run below command:
+Please make sure that Laravel 10.x requires a minimum PHP version of 8.1.
 
-    composer create-project laravel/laravel ticket-support-system
+First of all, we need to get a fresh Laravel 10 version application using below command, So open your terminal OR command prompt and run below command:
+
+    composer create-project laravel/laravel:^10.0 project-name
 
 ## To install laravel ui package by below command:
  
